@@ -1,0 +1,15 @@
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\bin\Debug\net8.0\Aula_Estrutura_Basica.exe
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\bin\Debug\net8.0\Aula_Estrutura_Basica.deps.json
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\bin\Debug\net8.0\Aula_Estrutura_Basica.runtimeconfig.json
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\bin\Debug\net8.0\Aula_Estrutura_Basica.dll
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\bin\Debug\net8.0\Aula_Estrutura_Basica.pdb
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.AssemblyInfoInputs.cache
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.AssemblyInfo.cs
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.csproj.CoreCompileInputs.cache
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.sourcelink.json
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.dll
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\refint\Aula_Estrutura_Basica.dll
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.pdb
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.genruntimeconfig.cache
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\ref\Aula_Estrutura_Basica.dll
