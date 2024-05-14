@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "t6DvJS60qkSxhRJJ51D0Tz9I1vPi5SGlb3b8Ew/sLRFi8ri6fMKstkj8jQVnLf5QnzZiENHxOv0rcdC38XJpaw==",
+  "dgSpecHash": "K2MqdDcfqvAvThkBtIZOenMdCOwQoJJgrWA1RHkxmMh1oDkjQ4pU07qrcZPNGvTRn8bmG9qxWV6TCsVBteCRow==",
   "success": true,
   "projectFilePath": "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_C-.NET\\Aula_Estrutura_Basica\\Aula_Estrutura_Basica.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\autologon\\.nuget\\packages\\fluentcolorconsole\\2.0.1\\fluentcolorconsole.2.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
