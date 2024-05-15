@@ -13,3 +13,6 @@ C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug
 C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.pdb
 C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.genruntimeconfig.cache
 C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\ref\Aula_Estrutura_Basica.dll
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.csproj.AssemblyReference.cache
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\bin\Debug\net8.0\FluentColorConsole.dll
+C:\Users\autologon\Documents\GitHub\Udemy_C-.NET\Aula_Estrutura_Basica\obj\Debug\net8.0\Aula_Estrutura_Basica.csproj.CopyComplete
