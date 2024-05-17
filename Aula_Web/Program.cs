@@ -15,9 +15,20 @@ app.MapPost(
 );
 app.MapGet(
     "/AddHeader",
-    (HttpResponse response) => {
+    (HttpResponse response) =>
+    {
         response.Headers.Add("Testando...", "API funciona mesmo.");
         return "Funcionou";
+    });
+
+app.MapPost("/SalvarProduto", (Produto produto) => {
+    return produto.ID + " - " + produto.Nome;
 });
 
 app.Run();
+
+public class Produto
+{
+    public string ID { get; set; }
+    public string Nome { get; set; }
+}
