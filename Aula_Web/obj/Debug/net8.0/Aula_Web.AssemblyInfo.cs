@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aula_Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be23978bbff8cf0a1ade292d7ace24d49dc8da01")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+537f4dc6df553007987df54c8929b5c412d50cdc")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("Aula_Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aula_Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
