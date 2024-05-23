@@ -4,8 +4,6 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet("/", () => "Aprendendo a usar API");
-<<<<<<< Updated upstream
-=======
 app.MapPost(
     "/user",
     () =>
@@ -29,7 +27,6 @@ app.MapPost("/SalvarProduto", (Produto produto) =>
 {
     return produto.ID + " - " + produto.Nome;
 });
->>>>>>> Stashed changes
 
 app.MapGet("/getproduto", ([FromQuery] string dataInicio, [FromQuery] string dataFim) =>
 {
@@ -47,8 +44,6 @@ app.MapGet("/getprodutodoheader", (HttpRequest request) =>
 });
 
 app.Run();
-<<<<<<< Updated upstream
-=======
 
 public static class RepositorioProduto
 {
@@ -73,4 +68,3 @@ public class Produto
     public string ID { get; set; }
     public string Nome { get; set; }
 }
->>>>>>> Stashed changes
