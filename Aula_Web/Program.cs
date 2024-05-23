@@ -5,27 +5,32 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Aprendendo a usar API");
 app.MapPost(
-    "/user",
+    "/usuario",
     () =>
         new
         {
-            Name = "Ângelo Hervis",
-            Age = 18,
+            nome = "Ângelo Hervis",
+            Idade = 18,
             CEP = 83810000,
             Email = "Angelo.hervis@gmail.com"
         }
 );
 app.MapGet(
-    "/AddHeader",
+    "/addheader",
     (HttpResponse response) =>
     {
         response.Headers.Add("Testando...", "API funciona mesmo.");
         return "Funcionou";
     });
 
-app.MapPost("/SalvarProduto", (Produto produto) =>
+app.MapPost("/salvarprodutorepositorio", (Produto produto) =>
 {
-    return produto.ID + " - " + produto.Nome;
+    RepositorioProduto.Add(produto);
+});
+
+app.MapPost("/salvarproduto", (Produto produto) =>
+{
+    return produto.codigo + " - " + produto.nome;
 });
 
 app.MapGet("/getproduto", ([FromQuery] string dataInicio, [FromQuery] string dataFim) =>
@@ -33,9 +38,9 @@ app.MapGet("/getproduto", ([FromQuery] string dataInicio, [FromQuery] string dat
     return dataInicio + " - " + dataFim;
 });
 
-app.MapGet("/getproduto/{code}", ([FromRoute] string code) =>
+app.MapGet("/getproduto/{codigo}", ([FromRoute] string codigo) =>
 {
-    return code;
+    return codigo;
 });
 
 app.MapGet("/getprodutodoheader", (HttpRequest request) =>
@@ -43,28 +48,33 @@ app.MapGet("/getprodutodoheader", (HttpRequest request) =>
     return request.Headers["codigo-produto"].ToString();
 });
 
+app.MapGet("/getprodutocodigo/{codigo}", ([FromRoute] string codigo) => {
+    var produto = RepositorioProduto.GetBy(codigo);
+    return produto;
+});
+
 app.Run();
 
 public static class RepositorioProduto
 {
-    public static List<Produto> Produtos { get; set; }
+    public static List<Produto> produtos { get; set; }
 
     public static void Add(Produto produto)
     {
-        if (Produtos == null)
+        if (produtos == null)
         {
-            Produtos = new List<Produto>();
+            produtos = new List<Produto>();
 
-            Produtos.Add(Produto);
+            produtos.Add(produto);
         }
     }
-    public static Produto GetBy(string code) {
-        return Produtos.First(p => p.code == code);
+    public static Produto GetBy(string codigo) {
+        return produtos.FirstOrDefault(p => p.codigo == codigo);
     }
 }
 
 public class Produto
 {
-    public string ID { get; set; }
-    public string Nome { get; set; }
+    public string codigo { get; set; }
+    public string nome { get; set; }
 }
