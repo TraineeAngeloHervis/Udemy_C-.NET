@@ -1,17 +1,17 @@
-{
+x {
   "format": 1,
   "restore": {
-    "C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\Aula_Estrutura_Basica.csproj": {}
+    "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\Aula_Estrutura_Basica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\Aula_Estrutura_Basica.csproj": {
+    "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\Aula_Estrutura_Basica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\Aula_Estrutura_Basica.csproj",
+        "projectUniqueName": "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\Aula_Estrutura_Basica.csproj",
         "projectName": "Aula_Estrutura_Basica",
-        "projectPath": "C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\Aula_Estrutura_Basica.csproj",
-        "packagesPath": "C:\\Users\\keity\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\obj\\",
+        "projectPath": "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\Aula_Estrutura_Basica.csproj",
+        "packagesPath": "C:\\Users\\autologon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Estrutura_Basica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

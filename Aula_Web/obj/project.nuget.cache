@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LdLihJ+lEMg=",
+  "dgSpecHash": "TuCUbF5E9K5x/NoaL7KcPepVKD8IioIJnIr3HBQPmaXlGCFYAuTr0iywAgbo+hk5FfAz2U0RI6zu8Pwa0QVHIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\Aula_Web.csproj",
+  "projectFilePath": "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\Aula_Web.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

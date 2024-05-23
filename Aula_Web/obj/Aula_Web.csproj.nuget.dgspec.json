@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\Aula_Web.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\Aula_Web.csproj",
         "packagesPath": "C:\\Users\\keity\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\keity\\OneDrive\\Documentos\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\obj\\",
+=======
+    "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\Aula_Web.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\Aula_Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\Aula_Web.csproj",
+        "projectName": "Aula_Web",
+        "projectPath": "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\Aula_Web.csproj",
+        "packagesPath": "C:\\Users\\autologon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\autologon\\Documents\\GitHub\\Udemy_Csharp.NET\\Aula_Web\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
