@@ -48,9 +48,22 @@ app.MapGet("/getprodutodoheader", (HttpRequest request) =>
     return request.Headers["codigo-produto"].ToString();
 });
 
-app.MapGet("/getprodutocodigo/{codigo}", ([FromRoute] string codigo) => {
+app.MapGet("/getprodutocodigo/{codigo}", ([FromRoute] string codigo) =>
+{
     var produto = RepositorioProduto.GetBy(codigo);
     return produto;
+});
+
+app.MapPut("/editarproduto", (Produto produto) =>
+{
+    var produtoSalvo = RepositorioProduto.GetBy(produto.codigo);
+    produtoSalvo.nome = produto.nome;
+});
+
+app.MapDelete("/deletarproduto/{codigo}", ([FromRoute] string codigo) =>
+{
+    var produtoSalvo = RepositorioProduto.GetBy(codigo);
+    RepositorioProduto.Remove(produtoSalvo);
 });
 
 app.Run();
@@ -68,8 +81,14 @@ public static class RepositorioProduto
             produtos.Add(produto);
         }
     }
-    public static Produto GetBy(string codigo) {
+    public static Produto GetBy(string codigo)
+    {
         return produtos.FirstOrDefault(p => p.codigo == codigo);
+    }
+
+    public static void Remove(Produto produto)
+    {
+        produtos.Remove(produto);
     }
 }
 
