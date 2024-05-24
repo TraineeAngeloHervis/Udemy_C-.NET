@@ -47,24 +47,29 @@ app.MapGet("/getprodutodoheader", (HttpRequest request) =>
 app.MapPost("/produtos", (Produto produto) =>
 {
     RepositorioProduto.Add(produto);
+    return Results.Created($"/produtos/{produto.codigo}", produto.codigo);
 });
 
 app.MapGet("/produtos/{codigo}", ([FromRoute] string codigo) =>
 {
     var produto = RepositorioProduto.GetBy(codigo);
-    return produto;
+    if (produto != null)
+        return Results.Ok(produto);
+    return Results.NotFound();
 });
 
 app.MapPut("/produtos", (Produto produto) =>
 {
     var produtoSalvo = RepositorioProduto.GetBy(produto.codigo);
     produtoSalvo.nome = produto.nome;
+    return Results.Ok();
 });
 
 app.MapDelete("/produtos/{codigo}", ([FromRoute] string codigo) =>
 {
     var produtoSalvo = RepositorioProduto.GetBy(codigo);
     RepositorioProduto.Remove(produtoSalvo);
+    return Results.Ok();
 });
 
 app.Run();
