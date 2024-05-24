@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
+var configuration = app.Configuration;
+RepositorioProduto.Init(configuration);
 
 app.MapGet("/", () => "Aprendendo a usar API");
 app.MapPost(
@@ -23,11 +25,6 @@ app.MapGet(
         return "Funcionou";
     });
 
-app.MapPost("/salvarprodutorepositorio", (Produto produto) =>
-{
-    RepositorioProduto.Add(produto);
-});
-
 app.MapPost("/salvarproduto", (Produto produto) =>
 {
     return produto.codigo + " - " + produto.nome;
@@ -48,28 +45,63 @@ app.MapGet("/getprodutodoheader", (HttpRequest request) =>
     return request.Headers["codigo-produto"].ToString();
 });
 
-app.MapGet("/getprodutocodigo/{codigo}", ([FromRoute] string codigo) => {
+//EndPoints Refatorados no padrão REST
+app.MapPost("/produtos", (Produto produto) =>
+{
+    RepositorioProduto.Add(produto);
+    return Results.Created($"/produtos/{produto.codigo}", produto.codigo);
+});
+
+app.MapGet("/produtos/{codigo}", ([FromRoute] string codigo) =>
+{
     var produto = RepositorioProduto.GetBy(codigo);
-    return produto;
+    if (produto != null)
+        return Results.Ok(produto);
+    return Results.NotFound();
+});
+
+app.MapPut("/produtos", (Produto produto) =>
+{
+    var produtoSalvo = RepositorioProduto.GetBy(produto.codigo);
+    produtoSalvo.nome = produto.nome;
+    return Results.Ok();
+});
+
+app.MapDelete("/produtos/{codigo}", ([FromRoute] string codigo) =>
+{
+    var produtoSalvo = RepositorioProduto.GetBy(codigo);
+    RepositorioProduto.Remove(produtoSalvo);
+    return Results.Ok();
+});
+
+app.MapGet("/configuracoes/database", (IConfiguration configuration) => {
+    return Results.Ok($"{configuration["database:connection"]}/{configuration["database:port"]}" );
 });
 
 app.Run();
 
 public static class RepositorioProduto
 {
-    public static List<Produto> produtos { get; set; }
+    public static List<Produto> produtos { get; set; } = produtos = new List<Produto>();
+
+    public static void Init(IConfiguration configuration)
+    {
+        var produtosInit = configuration.GetSection("Produtos").Get<List<Produto>>();
+        produtos = produtosInit;
+    }
 
     public static void Add(Produto produto)
     {
-        if (produtos == null)
-        {
-            produtos = new List<Produto>();
-
             produtos.Add(produto);
-        }
     }
-    public static Produto GetBy(string codigo) {
+    public static Produto GetBy(string codigo)
+    {
         return produtos.FirstOrDefault(p => p.codigo == codigo);
+    }
+
+    public static void Remove(Produto produto)
+    {
+        produtos.Remove(produto);
     }
 }
 
