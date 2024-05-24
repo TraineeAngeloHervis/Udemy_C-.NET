@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
+var configuration = app.Configuration;
+RepositorioProduto.Init(configuration);
 
 app.MapGet("/", () => "Aprendendo a usar API");
 app.MapPost(
@@ -72,20 +74,25 @@ app.MapDelete("/produtos/{codigo}", ([FromRoute] string codigo) =>
     return Results.Ok();
 });
 
+app.MapGet("/configuracoes/database", (IConfiguration configuration) => {
+    return Results.Ok($"{configuration["database:connection"]}/{configuration["database:port"]}" );
+});
+
 app.Run();
 
 public static class RepositorioProduto
 {
-    public static List<Produto> produtos { get; set; }
+    public static List<Produto> produtos { get; set; } = produtos = new List<Produto>();
+
+    public static void Init(IConfiguration configuration)
+    {
+        var produtosInit = configuration.GetSection("Produtos").Get<List<Produto>>();
+        produtos = produtosInit;
+    }
 
     public static void Add(Produto produto)
     {
-        if (produtos == null)
-        {
-            produtos = new List<Produto>();
-
             produtos.Add(produto);
-        }
     }
     public static Produto GetBy(string codigo)
     {
