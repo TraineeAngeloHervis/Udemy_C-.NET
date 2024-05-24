@@ -23,11 +23,6 @@ app.MapGet(
         return "Funcionou";
     });
 
-app.MapPost("/salvarprodutorepositorio", (Produto produto) =>
-{
-    RepositorioProduto.Add(produto);
-});
-
 app.MapPost("/salvarproduto", (Produto produto) =>
 {
     return produto.codigo + " - " + produto.nome;
@@ -48,19 +43,25 @@ app.MapGet("/getprodutodoheader", (HttpRequest request) =>
     return request.Headers["codigo-produto"].ToString();
 });
 
-app.MapGet("/getprodutocodigo/{codigo}", ([FromRoute] string codigo) =>
+//EndPoints Refatorados no padrão REST
+app.MapPost("/produtos", (Produto produto) =>
+{
+    RepositorioProduto.Add(produto);
+});
+
+app.MapGet("/produtos/{codigo}", ([FromRoute] string codigo) =>
 {
     var produto = RepositorioProduto.GetBy(codigo);
     return produto;
 });
 
-app.MapPut("/editarproduto", (Produto produto) =>
+app.MapPut("/produtos", (Produto produto) =>
 {
     var produtoSalvo = RepositorioProduto.GetBy(produto.codigo);
     produtoSalvo.nome = produto.nome;
 });
 
-app.MapDelete("/deletarproduto/{codigo}", ([FromRoute] string codigo) =>
+app.MapDelete("/produtos/{codigo}", ([FromRoute] string codigo) =>
 {
     var produtoSalvo = RepositorioProduto.GetBy(codigo);
     RepositorioProduto.Remove(produtoSalvo);
