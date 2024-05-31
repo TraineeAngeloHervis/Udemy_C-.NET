@@ -74,9 +74,11 @@ app.MapDelete("/produtos/{codigo}", ([FromRoute] string codigo) =>
     return Results.Ok();
 });
 
-app.MapGet("/configuracoes/database", (IConfiguration configuration) => {
+if(app.Environment.IsStaging()){
+    app.MapGet("/configuracoes/database", (IConfiguration configuration) => {
     return Results.Ok($"{configuration["database:connection"]}/{configuration["database:port"]}" );
 });
+}
 
 app.Run();
 

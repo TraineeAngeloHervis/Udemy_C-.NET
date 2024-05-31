@@ -102,3 +102,4 @@ C:\Users\keity\OneDrive\Documentos\GitHub\Udemy_Csharp.NET\Aula_Web\obj\Debug\ne
 C:\Users\keity\OneDrive\Documentos\GitHub\Udemy_Csharp.NET\Aula_Web\obj\Debug\net8.0\Aula_Web.pdb
 C:\Users\keity\OneDrive\Documentos\GitHub\Udemy_Csharp.NET\Aula_Web\obj\Debug\net8.0\Aula_Web.genruntimeconfig.cache
 C:\Users\keity\OneDrive\Documentos\GitHub\Udemy_Csharp.NET\Aula_Web\obj\Debug\net8.0\ref\Aula_Web.dll
+C:\Users\keity\OneDrive\Documentos\GitHub\Udemy_Csharp.NET\Aula_Web\bin\Debug\net8.0\appsettings.Staging.json
